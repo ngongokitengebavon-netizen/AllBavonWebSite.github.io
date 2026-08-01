@@ -1,86 +1,86 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AllBavon — La plateforme qui propulse les étudiants</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- Firebase SDKs -->
-    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
-    <script src="firebase-config.js"></script>
+.<! DOCTYPE html>
+<HTML. lang.="Fr">
+<Tête.>
+    <méta. Charset.="UTF-8">
+    <méta. Nom.="Viewport" Contenu.="width=device-width, initial-scale=1.0">
+    <Titre.>AllBavon — La plateforme qui propulse les étudiants</Titre.>
+    <Lien. rel.="Tableau de style" href.="styles.css">
+    <Lien. rel.="Préconnecter" href.="https://fonts.googleapis.com">
+    <Lien. href.="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel.="Tableau de style">
+</Tête.>
+<corps.>
+    <!-- SDK Firebase -->
+    <Script. src.="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></Script.>
+    <Script. src.="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></Script.>
+    <Script. src.="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></Script.>
+    <Script. src.="firebase-config.js"></Script.>
 
     <!-- Supabase SDK -->
-    <script src="https://unpkg.com/@supabase/supabase-js@2.39.0/dist/umd/supabase.min.js"></script>
+    <Script. src.="https://unpkg.com/@supabase/supabase-js@2.39.0/dist/umd/supabase.min.js"></Script.>
 
     <!-- Écran de protection / Code d'accès -->
-    <div id="access-overlay" class="access-overlay active">
-        <div class="access-modal">
-            <div class="logo-lockup">
-                <img src="assets/globe.png" alt="Globe AllBavon" class="globe-lockup">
-                <h1>AllBavon</h1>
-            </div>
-            <p class="access-subtitle">L'accès à la plateforme est sur invitation.</p>
-            <p class="access-desc">Entrez votre code d'accès pour rejoindre la communauté.</p>
+    <div. ID.="Accès-superposition" Classe.="Access-Overlay Active">
+        <div. Classe.="Accès-modal">
+            <div. Classe.="logo-lockup">
+                <IMG. src.="assets/globe.png" Alt.="Globe All Bavon" Classe.="Globe-lockup">
+                <H1.>Tout Bavon</H1.>
+            </div.>
+            <p. Classe.="Accès-sous-titre">L'accès à la plateforme est sur invitation.</p.>
+            <p. Classe.="Access-desc">Entrez votre code d'accès pour rejoindre la communauté.</p.>
             
-            <div class="code-inputs">
-                <input type="text" maxlength="1" class="code-digit" data-index="0">
-                <input type="text" maxlength="1" class="code-digit" data-index="1">
-                <input type="text" maxlength="1" class="code-digit" data-index="2">
-                <input type="text" maxlength="1" class="code-digit" data-index="3">
-                <input type="text" maxlength="1" class="code-digit" data-index="4">
-                <input type="text" maxlength="1" class="code-digit" data-index="5">
-                <input type="text" maxlength="1" class="code-digit" data-index="6">
-                <input type="text" maxlength="1" class="code-digit" data-index="7">
-            </div>
-            <p id="code-error" class="code-error">Code incorrect. Réessayez.</p>
-            <button id="verify-code" class="btn-primary">Vérifier le code</button>
+            <div. Classe.="Code-intrants">
+                <Entrée. Type.="texte" longueur max. max.="1" Classe.="Code-digit" Data-index.="0">
+                <Entrée. Type.="texte" longueur max. max.="1" Classe.="Code-digit" Data-index.="1">
+                <Entrée. Type.="texte" longueur max. max.="1" Classe.="Code-digit" Data-index.="2">
+                <Entrée. Type.="texte" longueur max. max.="1" Classe.="Code-digit" Data-index.="3">
+                <Entrée. Type.="texte" longueur max. max.="1" Classe.="Code-digit" Data-index.="4">
+ <input type="text" maxlength="1" class="code-digit" data-index="5"> <input type="text" maxlength="1" class="code-digit" data-index="5">
+ <input type="text" maxlength="1" class="code-digit" data-index="6"> <input type="text" maxlength="1" class="code-digit" data-index="6">
+ <input type="text" maxlength="1" class="code-digit" data-index="7"> <input type="text" maxlength="1" class="code-digit" data-index="7">
+ </div> </div>
+             <p id="code-error" class="code-error">Code incorrect. Réessayez.</p> <p id="code-error" class="code-error">Code incorrect. Réessayez.</p>
+             <button id="verify-code" class="btn-primary">Vérifier le code</button> <button id="verify-code" class="btn-primary">Vérifier le code</button>
             
-            <div class="access-footer">
-                <p>Vous n'avez pas de code ?</p>
-                <button id="request-access-btn" class="link-btn">Demander un accès</button>
-            </div>
-        </div>
-    </div>
+ <div class="access-footer"> <div class="access-footer">
+                 <p>Vous n'avez pas de code ?</p> <p>Vous n'avez pas de code ?</p>
+                 <button id="request-access-btn" class="link-btn">Demander un accès</button> <button id="request-access-btn" class="link-btn">Demander un accès</button>
+ </div> </div>
+ </div> </div>
+ </div> </div>
 
-    <!-- Modal de demande d'accès -->
-    <div id="request-modal" class="request-modal">
-        <div class="request-content">
-            <button id="close-request" class="close-btn">&times;</button>
-            <h2>Demander un accès</h2>
-            <p>Remplissez ce formulaire. Notre équipe étudiera votre demande.</p>
-            <form id="access-form" action="https://formspree.io/f/mqevwwbv" method="POST">
-                <input type="hidden" name="_subject" value="Nouvelle demande d'accès AllBavon">
-                <div class="form-group">
-                    <label>Nom complet</label>
-                    <input type="text" name="name" id="req-name" required placeholder="Votre nom">
-                </div>
-                <div class="form-group">
-                    <label>Email</label>
-                    <input type="email" name="email" id="req-email" required placeholder="votre@email.com">
-                </div>
-                <div class="form-group">
-                    <label>Pourquoi voulez-vous accéder à AllBavon ?</label>
-                    <textarea name="reason" id="req-reason" rows="3" required placeholder="Expliquez votre motivation..."></textarea>
-                </div>
-                <div class="form-group">
-                    <label>Où avez-vous entendu parler du site ?</label>
-                    <input type="text" name="source" id="req-source" required placeholder="Ex: réseaux sociaux, un ami, etc.">
-                </div>
-                <div class="form-group">
-                    <label>Faculté / Domaine d'études</label>
-                    <input type="text" name="faculty" id="req-faculty" placeholder="Ex: Médecine, Droit, Informatique...">
-                </div>
-                <button type="submit" class="btn-primary full">Envoyer la demande</button>
-            </form>
-            <div id="request-success" class="request-success">
-                <h3>✅ Demande envoyée !</h3>
-                <p>Nous l'étudierons et vous recevrez le code d'accès sous peu.</p>
+     <!-- Modal de demande d'accès --> <!-- Modal de demande d'accès -->
+ <div id="request-modal" class="request-modal"> <div id="request-modal" class="request-modal">
+ <div class="request-content"> <div class="request-content">
+ <button id="close-request" class="close-btn">&times ;</button> <button id="close-request" class="close-btn">&times;</button>
+             <h2>Demander un accès</h2> <h2>Demander un accès</h2>
+             <p>Remplissez ce formulaire. Notre équipe étudiera votre demande.</p> <p>Remplissez ce formulaire. Notre équipe étudiera votre demande.</p>
+ <form id="access-form" action="https://formspree.io/f/mqevwwbv" method="POST"> <form id="access-form" action="https://formspree.io/f/mqevwwbv" method="POST">
+                 <input type="hidden" name="_subject" value="Nouvelle demande d'accès AllBavon"> <input type="hidden" name="_subject" value="Nouvelle demande d'accès AllBavon">
+ <div class="form-group"> <div class="form-group">
+                     <label>Nom complet</label> <label>Nom complet</label>
+ <input type="text" name="name" id="req-name" placeholder="Votre nom"> <input type="text" name="name" id="req-name" required placeholder="Votre nom">
+ </div> </div.></div.<//
+ <div class="form-group"> <div class="form-group">
+ <label>Courriel.</label> <label>Courriel.</label>
+ <input type="email" name="email" id="req-email" placeholder="votre@email.com"> <input type="email" name="email" id="req-email" required placeholder="votre@email.com">
+ </div> </div.>div></div.>
+ <div class="form-group"> <div class="form-group">
+                     <label>Pourquoi voulez-vous accéder à AllBavon ?</label> <label>Pourquoi voulez-vous accéder à AllBavon ?</label>
+ <textarea name="reason" id="req-reason" rows="3" required placeholder="Expliquez votre motivation"...></textarea> <textarea name="reason" id="req-reason" rows="3" required placeholder="Expliquez votre motivation..."></textarea>
+ </div> </div>
+ <div class="form-group"> <div class="form-group">
+                     <label>Où avez-vous entendu parler du site ?</label> <label>Où avez-vous entendu parler du site ?</label>
+                     <input type="text" name="source" id="req-source" required placeholder="Ex: réseaux sociaux, un ami, etc."> <input type="text" name="source" id="req-source" required placeholder="Ex: réseaux sociaux, un ami, etc.">
+ </div> </div>
+ <div class="form-group"> <div class="form-group">
+                     <label>Faculté / Domaine d'études</label> <label>Faculté / Domaine d'études</label>
+                     <input type="text" name="faculty" id="req-faculty" placeholder="Ex: Médecine, Droit, Informatique..."> <input type="text" name="faculty" id="req-faculty" placeholder="Ex: Médecine, Droit, Informatique...">
+ </div> </div>
+                 <button type="submit" class="btn-primary full">Envoyer la demande</button> <button type="submit" class="btn-primary full">Envoyer la demande</button>
+ </formulaire> </formulaire>
+ <div id="request-success" class="request-success"> <div id="request-success" class="request-success">
+                 <h3>✅ Demande envoyée !</h3> <h3>✅ Demande envoyée !</h3>
+                 <p>Nous l'étudierons et vous recevrez le code d'accès sous peu.</p> <p>Nous l'étudierons et vous recevrez le code d'accès sous peu.</p>
             </div>
         </div>
     </div>
